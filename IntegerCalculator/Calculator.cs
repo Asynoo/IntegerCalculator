@@ -66,6 +66,10 @@ namespace IntegerCalculator
 
         public void Modulus(int x)
         {
+            if (x==0)
+            {
+                throw new ArgumentException();
+            }
             if (Result % x > int.MinValue && Result % x < int.MaxValue)
             {
                 Result %= x;
